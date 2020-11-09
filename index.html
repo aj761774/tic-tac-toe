@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header id="head">
+        <h1>Tic Tac Toe</h1>
+        <button id="playAgain">Play Again</button>
+    </header>
+    <section id="start">
+        <h3 id="msg"></h3>
+        
+        <div>
+           
+            <input type="text" placeholder="Player1 name" name="player1" id="player1" > 
+        </div>
+        <div><input type="text" placeholder="Player2 name" name="player2" id="player2"> </div>
+        <!-- <div><input type="number" placeholder="Dimension" name="dimension"  id="dimension"> </div> -->
+        <div>
+            <select  name="dimension"  id="dimension">
+            <option value="select dimension"  disabled selected>select dimension</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></div>
+        <div><button id="start-btn">Start game</button></div>
+    </section>
+    <h3 id="turn"></h3>
+    <h2 id="winMsg"></h2>
+    <section id="grid-container" class="grid"></section>
+    <footer>
+        Made with <span style="color: red;padding-left:0.2rem;padding-right: 0.2rem;"> ❤ </span>by Abhinav Jaiswal
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+}
+header{
+    text-align: center;
+    margin-top: 3rem;
+    color: white;
+    font-size: 1.6rem;
+    text-shadow: 3px 3px 4px cyan;
+    animation: colorChanger 1s infinite;
+}
+@keyframes colorChanger{
+    0%{
+        text-shadow: 3px 3px 4px cyan,-2px -2px 4px cyan;
+    }
+    50%{
+        text-shadow: 3px 3px 4px crimson,-2px -2px 4px crimson;
+    }
+    100%{
+        text-shadow: 3px 3px 4px purple,-2px -2px 4px purple;
+    }
+}
+section#start{
+  background-color: white;   
+   width: 300px;
+   padding: 1.5rem;
+   margin:auto;
+   background-color: turquoise;
+}
+#msg {
+    color: red;
+}
+#turn{
+    text-align: center;
+}
+h2{
+    color: red;
+    text-align: center;
+}
+section#start >div,section#start >h3{
+    text-align: center;
+    margin: 0.5rem;
+}
+section#start >div > input,section#start >div > select{
+    height: 2.3rem;
+    padding: 0.2rem;
+    width: 15rem;
+    border-radius: 12px;
+
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+section#start >div > input:focus,section#start >div > button:focus{
+    outline: none;
+}
+button{
+    padding: 0.5rem;
+    width: 15rem;
+    cursor: pointer;
+    background-color: #036;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+section.grid{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.row{
+display: flex;
+}
+.row .col{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+section.hide{
+   display: none;
+}
+#playAgain{
+    display: none;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top:2rem ;
+    font-size: 1rem;
+}
