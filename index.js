@@ -4,6 +4,7 @@ const player1 = document.getElementById('player1');
 const player2 = document.getElementById('player2');
 const dimension = document.getElementById('dimension');
 const playAgain = document.getElementById('playAgain');
+const winMsg = document.getElementById('winMsg');
 const winningPossibility = [];
 const audio = new Audio('green.mp3');
 const wrong = new Audio('wrong.mp3');
@@ -95,12 +96,12 @@ const handlePlayerClick = ()=>{
                 audio.play();
                 if(cols[i].innerHTML==''){
                     cols[i].innerHTML = n%2==0? 'X' : 'o';
-                    cols[i].style = "transform:rotate(360deg)";
+                    cols[i].style = "transform:rotate3d(1,1,1,360deg)";
                     if(n%2==0){
-                        cols[i].style.backgroundColor = "orange";
+                        cols[i].style.backgroundColor = "crimson";
                     }
                     else{
-                        cols[i].style.backgroundColor = "cyan";
+                        cols[i].style.backgroundColor = "#036";
                     }
                     n++;  
                     checkWinner();
@@ -138,14 +139,16 @@ const checkWinner = ()=>{
              handleTurn(n);
          }
          if(win===true){
-             document.getElementById('winMsg').innerHTML = `${winnerName} winned the game!`;
+             winMsg.innerHTML += `${winnerName} won the game!`;
+             winMsg.classList.add('winMsgDesign');
              turn.innerHTML = '';
              document.getElementById('grid-container').style.display = 'none';
              playAgain.style.display = "inline-block";
              winned.play();
          }  
          if(win===false && count === Number(dimension.value)*Number(dimension.value)){
-            document.getElementById('winMsg').innerHTML = `Match Draw!`;
+            winMsg.innerHTML += `Match Draw!`;
+            winMsg.classList.add('winMsgDesign');
             turn.innerHTML = '';
             document.getElementById('grid-container').style.display = 'none';
             playAgain.style.display = "inline-block";

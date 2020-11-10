@@ -16,13 +16,13 @@
         
         <div>
            
-            <input type="text" placeholder="Player1 name" name="player1" id="player1" > 
+            <input type="text" placeholder="Player1 name" name="player1" id="player1" autocomplete="off"> 
         </div>
-        <div><input type="text" placeholder="Player2 name" name="player2" id="player2"> </div>
+        <div><input type="text" placeholder="Player2 name" name="player2" id="player2" autocomplete="off"> </div>
         <!-- <div><input type="number" placeholder="Dimension" name="dimension"  id="dimension"> </div> -->
         <div>
             <select  name="dimension"  id="dimension">
-            <option value="select dimension"  disabled selected>select dimension</option>
+            <option value="select dimension"   disabled selected>select dimension</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
@@ -30,7 +30,9 @@
         <div><button id="start-btn">Start game</button></div>
     </section>
     <h3 id="turn"></h3>
-    <h2 id="winMsg"></h2>
+    <h2 id="winMsg">
+        
+    </h2>
     <section id="grid-container" class="grid"></section>
     <footer>
         Made with <span style="color: red;padding-left:0.2rem;padding-right: 0.2rem;"> ❤ </span>by Abhinav Jaiswal
