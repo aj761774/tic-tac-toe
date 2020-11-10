@@ -95,6 +95,7 @@ const handlePlayerClick = ()=>{
                 audio.play();
                 if(cols[i].innerHTML==''){
                     cols[i].innerHTML = n%2==0? 'X' : 'o';
+                    cols[i].style = "transform:rotate(360deg)";
                     if(n%2==0){
                         cols[i].style.backgroundColor = "orange";
                     }
